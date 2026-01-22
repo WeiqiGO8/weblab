@@ -2,7 +2,7 @@
 console.log("Hello lab");
 
 /*
-1. Variables and Data Types
+! 1. Variables and Data Types
  		Task: Create variables of different data types as well as array, and object and log them to the console
 */
 
@@ -36,7 +36,7 @@ console.log(myObject);
 console.log(myFirstArray);
 
 /*
-2. Loops
+! 2. Loops
 		Task: Print all numbers from 1 to 10 usign a for loop and a while loop  
 */
 
@@ -60,7 +60,7 @@ myForLoop();
 myWhileLoop();
 
 /* 
-3. Find the largest number in an array
+! 3. Find the largest number in an array
 		Task: Write a Javascript function - findLargestNumber (numbers) - that takes an array of numbers and returns the largest number in that array.
 
 Example
@@ -88,7 +88,7 @@ function findLargestNumber(arr) {
 console.log(findLargestNumber(biggestNumberArray));
 
 /*
-4. Functions
+! 4. Functions
 	Task: Write a function to calculate the factorial of a number
 */
 
@@ -106,7 +106,7 @@ function calculateFactorial(n) {
 console.log("Factorial of " + 5 + " is " + calculateFactorial(5));
 
 /* 
-5. Objects
+! 5. Objects
 Task: Create an object to represent a car and log its properties and values.
 */
 
@@ -124,7 +124,7 @@ let carObject = {
 console.log(carObject.getName());
 
 /*
-6. forEach with Callback
+! 6. forEach with Callback
 	Task: Create an array of fruits and print each fruit using a forEach with a callback function 
 
 	ex:
@@ -138,7 +138,7 @@ fruits.forEach((element) => {
 });
 
 /* 
-7. Capitalize the First Letter of Each Word
+! 7. Capitalize the First Letter of Each Word
 Task: Write a function capitalizeWords(sentence) that takes a sentence as an input andcapitalizes the fi rst letter of each word in the sentence. Return the modifi ed sentence.
 
 Example:
@@ -146,20 +146,45 @@ console.log(capitalizeWords("hello world from javascript!"));
 Output: "Hello World From Javascript!"
 */
 
-// function upperCaseFirstWord(str) {
-// 	let str = " ";
-// 	let splitWords = str.split(" ");
+// Help from Liudmyla Petrus
 
-// 	splitWords.forEach((word) => {
-// 		let sliceWords = str.slice(0, 1);
-// 		console.log(sliceWords);
+function upperCaseFirstWord(fullSentence) {
+	let string = fullSentence.split(" ");
+	let splitWords = string.map((word) => {
+		return word.slice(0, 1).toUpperCase() + word.slice(1);
+	});
+
+	let slicedSentence = splitWords.join(" ");
+	return slicedSentence;
+}
+console.log(upperCaseFirstWord("hello world from javascript"));
+
+// function upperCaseFirstWord(sentence) {
+// 	let newWords = sentence.split(" ").map((word) => {
+// 		return word.slice(0, 1).toUpperCase() + word.slice(1);
 // 	});
 
-// 	console.log(str);
+// 	let newSentence = newWords.join(" ");
+// 	return newSentence;
+// }
+// console.log(upperCaseFirstWord("hello world from javascript"));
+
+// function capitalizeWords(sentence) {
+// 	let words = sentence.split(" ");
+
+// 	let newWords = words.map((word) => {
+// 		return word.slice(0, 1).toUpperCase() + word.slice(1);
+// 	});
+
+// 	let newSentence = newWords.join(" ");
+
+// 	return newSentence;
 // }
 
+// console.log(capitalizeWords("hello world from javascript!"));
+
 /*
-8. Merge Two Objects
+! 8. Merge Two Objects
 	Task: Write a function mergeObjects(obj1, obj2) that merges the properties of obj 2 into obj1. If a property already exists in obj1, it should be overwritten by the corresponding property in obj2. Return the merged object.
 
 	Example:
@@ -184,7 +209,7 @@ function mergeObjects() {
 console.log(mergeObjects());
 
 /* 
-9. Count Character Frequency in a string
+! 9. Count Character Frequency in a string
 	Task: Write a function charFrequency(str) that takes a string and returns an object where the keys are characters and the values are the frequency of those characters in the string.
 
 	Example:
@@ -197,7 +222,7 @@ console.log(mergeObjects());
 function charFrequency(str) {}
 
 /* 
-10. Create a Simple Class (ES6 Classes)
+! 10. Create a Simple Class (ES6 Classes)
 	Task: Use ES6 classes to model a Rectangle. The class should have:
 	
 	* A constructor taking width and height
@@ -213,3 +238,5 @@ const square = new Rectangle(4, 4);
 console.log(square.getArea()); // 16
 console.log(Rectangle.isSquare(square)); // true
 */
+
+// ! Part 2
