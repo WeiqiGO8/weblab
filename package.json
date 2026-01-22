@@ -2,6 +2,11 @@
 	"name": "weblab",
 	"version": "1.0.0",
 	"description": "weblab",
+	"keywords": [
+		"web",
+		"labs",
+		"javascript"
+	],
 	"license": "ISC",
 	"author": "Hannah Jansson",
 	"type": "commonjs",
