@@ -159,7 +159,17 @@ Output: "Hello World From Javascript!"
 // }
 
 /*
-8.
+8. Merge Two Objects
+	Task: Write a function mergeObjects(obj1, obj2) that merges the properties of obj 2 into obj1. If a property already exists in obj1, it should be overwritten by the corresponding property in obj2. Return the merged object.
+
+	Example:
+let person = { name: "Alice", age: 25 };
+let jobInfo = { role: "Developer", age: 30 };
+
+const merged = mergeObjects(person, jobInfo);
+console.log(merged);
+
+/ Output: {name: "Alice", age: 30, role: "Developer"};
 
 */
 
@@ -172,3 +182,34 @@ function mergeObjects() {
 }
 
 console.log(mergeObjects());
+
+/* 
+9. Count Character Frequency in a string
+	Task: Write a function charFrequency(str) that takes a string and returns an object where the keys are characters and the values are the frequency of those characters in the string.
+
+	Example:
+	console.log(carFrequency("banana"));
+	/Output: { b: 1, a: 3, n: 2};
+
+
+*/
+
+function charFrequency(str) {}
+
+/* 
+10. Create a Simple Class (ES6 Classes)
+	Task: Use ES6 classes to model a Rectangle. The class should have:
+	
+	* A constructor taking width and height
+	* A method getArea() that returns the area of the rectangle
+	* A static method isSquare(rectangle) that returns true if the rectangle is a square, otherwise false.
+
+Example:
+const rect = new Rectangle(10, 5);
+console.log(rect.getArea()); // 50
+console.log(Rectangle.isSqare(rect)); // false
+
+const square = new Rectangle(4, 4);
+console.log(square.getArea()); // 16
+console.log(Rectangle.isSquare(square)); // true
+*/
