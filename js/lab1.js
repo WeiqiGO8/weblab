@@ -1,11 +1,7 @@
 // Beginning
 console.log("Hello lab");
 
-/*
-! 1. Variables and Data Types
- 		Task: Create variables of different data types as well as array, and object and log them to the console
-*/
-
+// ! 1. Variables and Data Types
 let letter = "abcde";
 let number = "12345";
 
@@ -35,11 +31,7 @@ console.log(mySet);
 console.log(myObject);
 console.log(myFirstArray);
 
-/*
-! 2. Loops
-		Task: Print all numbers from 1 to 10 usign a for loop and a while loop  
-*/
-
+// ! 2. Loops
 let myNumberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function myForLoop() {
@@ -59,16 +51,7 @@ function myWhileLoop() {
 myForLoop();
 myWhileLoop();
 
-/* 
-! 3. Find the largest number in an array
-		Task: Write a Javascript function - findLargestNumber (numbers) - that takes an array of numbers and returns the largest number in that array.
-
-Example
-const arr = [3,7,2,9,5];
-console.log(findLargestNumber(arr));
-	Output: 9
-
-*/
+// ! 3. Find the largest number in an array
 const biggestNumberArray = [9, 10, 50, 3, 20];
 
 // function findLargestNumber(arr) {
@@ -87,11 +70,7 @@ function findLargestNumber(arr) {
 
 console.log(findLargestNumber(biggestNumberArray));
 
-/*
-! 4. Functions
-	Task: Write a function to calculate the factorial of a number
-*/
-
+// ! 4. Functions
 function calculateFactorial(n) {
 	let tempN = 1;
 
@@ -105,11 +84,7 @@ function calculateFactorial(n) {
 
 console.log("Factorial of " + 5 + " is " + calculateFactorial(5));
 
-/* 
-! 5. Objects
-Task: Create an object to represent a car and log its properties and values.
-*/
-
+// ! 5. Objects
 let carObject = {
 	Brand: "Volvo",
 	Color: "Black",
@@ -123,31 +98,14 @@ let carObject = {
 
 console.log(carObject.getName());
 
-/*
-! 6. forEach with Callback
-	Task: Create an array of fruits and print each fruit using a forEach with a callback function 
-
-	ex:
-	let fruits = ["appel", "Banana", "Cherry", "Date"] 
-*/
-
+// ! 6. forEach with Callback
 let fruits = ["Apple", "Banana", "Orange", "Pear"];
 
 fruits.forEach((element) => {
 	console.log(element);
 });
 
-/* 
-! 7. Capitalize the First Letter of Each Word
-Task: Write a function capitalizeWords(sentence) that takes a sentence as an input andcapitalizes the fi rst letter of each word in the sentence. Return the modifi ed sentence.
-
-Example:
-console.log(capitalizeWords("hello world from javascript!"));
-Output: "Hello World From Javascript!"
-*/
-
-// Help from Liudmyla Petrus
-
+// ! 7. Capitalize the First Letter of Each Word
 function upperCaseFirstWord(fullSentence) {
 	let string = fullSentence.split(" ");
 	let splitWords = string.map((word) => {
@@ -183,21 +141,7 @@ console.log(upperCaseFirstWord("hello world from javascript"));
 
 // console.log(capitalizeWords("hello world from javascript!"));
 
-/*
-! 8. Merge Two Objects
-	Task: Write a function mergeObjects(obj1, obj2) that merges the properties of obj 2 into obj1. If a property already exists in obj1, it should be overwritten by the corresponding property in obj2. Return the merged object.
-
-	Example:
-let person = { name: "Alice", age: 25 };
-let jobInfo = { role: "Developer", age: 30 };
-
-const merged = mergeObjects(person, jobInfo);
-console.log(merged);
-
-/ Output: {name: "Alice", age: 30, role: "Developer"};
-
-*/
-
+// ! 8. Merge Two Objects
 let person = { name: "Alice", age: 25 };
 let jobInfo = { role: "Developer", age: 30 };
 
@@ -215,11 +159,32 @@ console.log(mergeObjects());
 	Example:
 	console.log(carFrequency("banana"));
 	/Output: { b: 1, a: 3, n: 2};
-
-
 */
 
-function charFrequency(str) {}
+// value = frequency/number of times the key/character appear in the string
+// key = characters
+
+// new Set(["a", "b", "c"]).forEach((value, key) => {
+// 	console.log(key + ": " + value);
+// });
+
+function charFrequency(str) {
+	let objectSentence = {};
+	let keyCharacters = new Set(str);
+
+	keyCharacters.forEach((key) => {
+		objectSentence[key] = 0;
+
+		for (let i of str) {
+			if (i === key) {
+				objectSentence[key]++;
+			}
+		}
+	});
+	return objectSentence;
+}
+
+console.log(charFrequency("banana"));
 
 /* 
 ! 10. Create a Simple Class (ES6 Classes)
