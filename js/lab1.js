@@ -229,7 +229,87 @@ let greeting = greet(" Alice");
 console.log(greeting);
 
 // ! 3.
+// function process(num1, num2, sum) {
+// 	let array1 = [sum];
 
-function process() {}
+// 	sum = num1 * num2;
 
-process(5, callback);
+// 	array1.forEach((value) => {
+// 		console.log(value);
+// 	});
+// }
+
+function process(num1, num2) {
+	let sum = num1 * num2;
+	return sum;
+}
+
+console.log(process(5, 2));
+
+// ! 4.
+function myFirstMapArray() {
+	let myArray = [1, 2, 3, 4];
+	let mapArray1 = myArray.map((num) => {
+		return num * 2;
+	});
+	return mapArray1;
+}
+
+console.log(myFirstMapArray());
+
+// ! 5.
+function filterArray1() {
+	let myFilterArray = [5, 10, 15, 20, 30, 30, 45, 1, 3, 20, 50];
+	let result = myFilterArray.filter((number) => {
+		return number > 10;
+	});
+	return result;
+}
+
+console.log(filterArray1());
+
+// ! 6.
+
+// function extractUserNames(users) {
+// 	const users = [
+// 		{ id: 1, user: "Alice" },
+// 		{ id: 2, user: "Bob" },
+// 		{ id: 3, user: "Charlie" },
+// 	];
+
+// 	let newUserNames = users.map((person) => {});
+// }
+
+// ! 7.
+function myFruitArray() {
+	let array1 = ["apple", "banana", "apple", "cherry", "banana", "apple"];
+	// let array1 = [1, 2, 3, 4, 5];
+
+	let fruitCounter = array1.reduce((accumulator, currentValue) => {
+		if (accumulator[currentValue]) {
+			accumulator[currentValue] += 1;
+		} else {
+			accumulator[currentValue] = 1;
+		}
+		return accumulator;
+	}, {});
+	console.log(fruitCounter);
+}
+console.log(myFruitArray());
+
+//!8
+function sumOfNumbers() {
+	let array1 = [10, 20, 30, 40];
+	let array2 = array1.map((x) => {
+		return x * 2;
+	});
+	let array3 = array1.map((x) => x * x);
+	let sum = array1.reduce(
+		(accumulator, currentValue) => accumulator + currentValue,
+		0,
+	);
+	// console.log(array2, array3, sum);
+	return { array2, array3, sum };
+}
+// sumOfNumbers();
+console.log(sumOfNumbers());
