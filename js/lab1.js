@@ -168,23 +168,23 @@ console.log(mergeObjects());
 // 	console.log(key + ": " + value);
 // });
 
-function charFrequency(str) {
+function characterFrequency(string) {
 	let objectSentence = {};
-	let keyCharacters = new Set(str);
+	let keyCharacters = new Set(string);
 
-	keyCharacters.forEach((key) => {
-		objectSentence[key] = 0;
+	keyCharacters.forEach((character) => {
+		objectSentence[character] = 0;
 
-		for (let i of str) {
-			if (i === key) {
-				objectSentence[key]++;
+		for (let keystroke of string) {
+			if (keystroke === character) {
+				objectSentence[character]++;
 			}
 		}
 	});
 	return objectSentence;
 }
 
-console.log(charFrequency("banana"));
+console.log(characterFrequency("banana"));
 
 /* 
 ! 10. Create a Simple Class (ES6 Classes)
@@ -205,3 +205,31 @@ console.log(Rectangle.isSquare(square)); // true
 */
 
 // ! Part 2
+
+// ! 1.
+// function add(a, b) {
+// 	return a + b;
+// 	let result = 5 + 3;
+// return result;
+// }
+
+let additionFunction = (a, b) => {
+	return 5 + 3;
+};
+
+console.log(additionFunction());
+
+// ! 2.
+let greet = (personName) => {
+	return "Hello" + personName;
+};
+
+let greeting = greet(" Alice");
+
+console.log(greeting);
+
+// ! 3.
+
+function process() {}
+
+process(5, callback);
