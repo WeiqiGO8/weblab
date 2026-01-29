@@ -20,6 +20,7 @@ let myObject = { firstName: "Hannah", lastName: "Jansson" };
 
 let myFirstArray = ["HTML", "CSS", "Javascript", "Node.js"];
 
+console.log("Lab 1, part 1, task 1");
 console.log(letter);
 console.log(number);
 console.log(booleansT);
@@ -47,7 +48,7 @@ function myWhileLoop() {
 		console.log(myNumberArray[x]);
 	}
 }
-
+console.log("Lab 1, part 1, task 2");
 myForLoop();
 myWhileLoop();
 
@@ -68,6 +69,7 @@ function findLargestNumber(arr) {
 	return tmpBiggestNumber;
 }
 
+console.log("Lab 1, part 1, task 3");
 console.log(findLargestNumber(biggestNumberArray));
 
 // ! 4. Functions
@@ -81,6 +83,7 @@ function calculateFactorial(n) {
 	}
 	return tempN;
 }
+console.log("Lab 1, part 1, task 4");
 
 console.log("Factorial of " + 5 + " is " + calculateFactorial(5));
 
@@ -96,14 +99,18 @@ let carObject = {
 	},
 };
 
+console.log("Lab 1, part 1, task 5");
 console.log(carObject.getName());
 
 // ! 6. forEach with Callback
+console.log("Lab 1, part 1, task 6");
 let fruits = ["Apple", "Banana", "Orange", "Pear"];
 
 fruits.forEach((element) => {
 	console.log(element);
 });
+
+console.log(fruits);
 
 // ! 7. Capitalize the First Letter of Each Word
 function upperCaseFirstWord(fullSentence) {
@@ -115,6 +122,8 @@ function upperCaseFirstWord(fullSentence) {
 	let slicedSentence = splitWords.join(" ");
 	return slicedSentence;
 }
+
+console.log("Lab 1, part 1, task 7");
 console.log(upperCaseFirstWord("hello world from javascript"));
 
 // function upperCaseFirstWord(sentence) {
@@ -150,17 +159,10 @@ function mergeObjects() {
 	return obj3;
 }
 
+console.log("Lab 1, part 1, task 8");
 console.log(mergeObjects());
 
-/* 
-! 9. Count Character Frequency in a string
-	Task: Write a function charFrequency(str) that takes a string and returns an object where the keys are characters and the values are the frequency of those characters in the string.
-
-	Example:
-	console.log(carFrequency("banana"));
-	/Output: { b: 1, a: 3, n: 2};
-*/
-
+// ! 9. Count Character Frequency in a string
 // value = frequency/number of times the key/character appear in the string
 // key = characters
 
@@ -184,29 +186,43 @@ function characterFrequency(string) {
 	return objectSentence;
 }
 
+console.log("Lab 1, part 1, task 9");
 console.log(characterFrequency("banana"));
 
-/* 
-! 10. Create a Simple Class (ES6 Classes)
-	Task: Use ES6 classes to model a Rectangle. The class should have:
-	
-	* A constructor taking width and height
-	* A method getArea() that returns the area of the rectangle
-	* A static method isSquare(rectangle) that returns true if the rectangle is a square, otherwise false.
+// ! 10. Create a Simple Class (ES6 Classes)
 
-Example:
-const rect = new Rectangle(10, 5);
-console.log(rect.getArea()); // 50
-console.log(Rectangle.isSqare(rect)); // false
+class Rectangle {
+	constructor(width, height) {
+		this.width = width;
+		this.height = height;
+	}
 
-const square = new Rectangle(4, 4);
-console.log(square.getArea()); // 16
-console.log(Rectangle.isSquare(square)); // true
-*/
+	getArea() {
+		return this.width * this.height;
+	}
+
+	isSquare() {
+		return this.width === this.height;
+		// if () {
+		// 	return true;
+		// } else {
+		// 	return false;
+		// };
+	}
+}
+
+console.log("Lab 1, part 1, task 10");
+let rect1 = new Rectangle(3, 5);
+console.log("The area is: ", rect1.getArea());
+console.log("Is it a square? ", rect1.isSquare());
+
+let rect2 = new Rectangle(3.5, 3.5);
+console.log("The area is: ", rect2.getArea());
+console.log("Is it a square? ", rect2.isSquare());
 
 // ! Part 2
 
-// ! 1.
+// ! 1. Convert a Regular Function to Arrow Function
 // function add(a, b) {
 // 	return a + b;
 // 	let result = 5 + 3;
@@ -217,18 +233,21 @@ let additionFunction = (a, b) => {
 	return 5 + 3;
 };
 
+console.log("Lab 1, part 2, task 1");
+
 console.log(additionFunction());
 
-// ! 2.
+// ! 2. Single Parameter Arrow Function
 let greet = (personName) => {
 	return "Hello" + personName;
 };
 
 let greeting = greet(" Alice");
 
+console.log("Lab 1, part 2, task 2");
 console.log(greeting);
 
-// ! 3.
+// ! 3. Basic Callback Function
 // function process(num1, num2, sum) {
 // 	let array1 = [sum];
 
@@ -244,9 +263,10 @@ function process(num1, num2) {
 	return sum;
 }
 
+console.log("Lab 1, part 2, task 3");
 console.log(process(5, 2));
 
-// ! 4.
+// ! 4. Arrow function in map
 function myFirstMapArray() {
 	let myArray = [1, 2, 3, 4];
 	let mapArray1 = myArray.map((num) => {
@@ -255,9 +275,10 @@ function myFirstMapArray() {
 	return mapArray1;
 }
 
+console.log("Lab 1, part 2, task 4");
 console.log(myFirstMapArray());
 
-// ! 5.
+// ! 5. Pass an Anonymous Function to filter
 function filterArray1() {
 	let myFilterArray = [5, 10, 15, 20, 30, 30, 45, 1, 3, 20, 50];
 	let result = myFilterArray.filter((number) => {
@@ -266,21 +287,27 @@ function filterArray1() {
 	return result;
 }
 
+console.log("Lab 1, part 2, task 5");
 console.log(filterArray1());
 
-// ! 6.
+// ! 6. Extract User Names
+function extractUserNames(user) {
+	const users = [
+		{ id: 1, user: "Alice" },
+		{ id: 2, user: "Bob" },
+		{ id: 3, user: "Charlie" },
+	];
 
-// function extractUserNames(users) {
-// 	const users = [
-// 		{ id: 1, user: "Alice" },
-// 		{ id: 2, user: "Bob" },
-// 		{ id: 3, user: "Charlie" },
-// 	];
+	let newUserNames = users.map((name) => {
+		return name.user;
+	});
+	return newUserNames;
+}
 
-// 	let newUserNames = users.map((person) => {});
-// }
+console.log("Lab 1, part 2, task 6");
+console.log(extractUserNames());
 
-// ! 7.
+// ! 7. Count Occurences
 function myFruitArray() {
 	let array1 = ["apple", "banana", "apple", "cherry", "banana", "apple"];
 	// let array1 = [1, 2, 3, 4, 5];
@@ -295,9 +322,11 @@ function myFruitArray() {
 	}, {});
 	console.log(fruitCounter);
 }
+
+console.log("Lab 1, part 2, task 7");
 console.log(myFruitArray());
 
-//!8
+//!8 Sum of Numbers
 function sumOfNumbers() {
 	let array1 = [10, 20, 30, 40];
 	let array2 = array1.map((x) => {
@@ -312,4 +341,5 @@ function sumOfNumbers() {
 	return { array2, array3, sum };
 }
 // sumOfNumbers();
+console.log("Lab 1, part 2, task 8");
 console.log(sumOfNumbers());
