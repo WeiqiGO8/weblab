@@ -1,8 +1,9 @@
-console.log("LAB 2");
-let body = document.body;
+console.log("LAB 2 part 1 & 2");
 
-let psPerTag = document.getElementsByTagName("p");
-console.log(psPerTag);
+// ! Task 1.
+let p_per_query = document.querySelector("p");
+console.log(p_per_query.parentElement);
 
-let pPerQuery = document.querySelector("p");
-console.log(pPerQuery);
+// ! Task 2.
+let span_container = document.querySelector("span");
+console.log(span_container.parentElement);
