@@ -248,23 +248,18 @@ console.log("Lab 1, part 2, task 2");
 console.log(greeting);
 
 // ! 3. Basic Callback Function
-// function process(num1, num2, sum) {
-// 	let array1 = [sum];
+let callback = (num1) => {
+	return num1 * 2;
+};
 
-// 	sum = num1 * num2;
-
-// 	array1.forEach((value) => {
-// 		console.log(value);
-// 	});
-// }
-
-function process(num1, num2) {
-	let sum = num1 * num2;
-	return sum;
+function process(number, callbackFunction) {
+	return callbackFunction(number);
 }
 
+let result = process(5, callback);
+
 console.log("Lab 1, part 2, task 3");
-console.log(process(5, 2));
+console.log(result);
 
 // ! 4. Arrow function in map
 function myFirstMapArray() {
@@ -332,6 +327,7 @@ function sumOfNumbers() {
 	let array2 = array1.map((x) => {
 		return x * 2;
 	});
+
 	let array3 = array1.map((x) => x * x);
 	let sum = array1.reduce(
 		(accumulator, currentValue) => accumulator + currentValue,
@@ -340,6 +336,7 @@ function sumOfNumbers() {
 	// console.log(array2, array3, sum);
 	return { array2, array3, sum };
 }
+
 // sumOfNumbers();
 console.log("Lab 1, part 2, task 8");
 console.log(sumOfNumbers());
