@@ -305,7 +305,6 @@ console.log(extractUserNames());
 // ! 7. Count Occurences
 function myFruitArray() {
 	let array1 = ["apple", "banana", "apple", "cherry", "banana", "apple"];
-	// let array1 = [1, 2, 3, 4, 5];
 
 	let fruitCounter = array1.reduce((accumulator, currentValue) => {
 		if (accumulator[currentValue]) {
