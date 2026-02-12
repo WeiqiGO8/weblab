@@ -129,7 +129,60 @@ console.log(visibilityParagraph);
 visibilityButton.addEventListener("click", visibilityFunction);
 
 //! Lab 2 part 2 task 7
-let box = document.getElementsByClassName("boxButton");
+let box = document.querySelector(".box");
 let boxButton = document.getElementById("boxButton");
 
-//addEventListener
+function highlightFunction() {
+	if (box.style.color === "red") {
+		box.style.color = "black";
+	} else {
+		box.style.color = "red";
+	}
+}
+
+boxButton.addEventListener("click", highlightFunction);
+
+//! Lab 2 part 2 task 8
+let countingButton = document.querySelector("#countingButton");
+let numberOfClicksCounter = document.querySelector("#numberOfClicksCounter");
+
+let timesClicked = 0;
+
+numberOfClicksCounter.style.visibility = "hidden";
+
+function btnClicked() {
+	timesClicked++;
+	numberOfClicksCounter.textContent = timesClicked;
+	numberOfClicksCounter.style.visibility = "visible";
+}
+
+countingButton.addEventListener("click", btnClicked);
+
+//! Lab 2 part 2 task 9
+let displayOption = document.querySelector("#displayOption");
+let selectComputerBrand = document.querySelector("#selectComputerBrand");
+
+function displaySelectedOptionFunction() {
+	displayOption.innerText = selectComputerBrand.value;
+}
+
+selectComputerBrand.addEventListener("change", displaySelectedOptionFunction);
+
+//! Lab 2 part 2 task 10
+let totodoField = document.querySelector("#todoField");
+let submitBtn = document.querySelector("#submitBtn");
+let todoList = document.querySelector("#todoList");
+
+function createTodoListItemFunction() {
+	let inputValue = totodoField.value;
+
+	if (inputValue.trim() === "") return;
+
+	let newTodoItem = document.createElement("li");
+
+	newTodoItem.innerText = inputValue;
+	todoList.appendChild(newTodoItem);
+	totodoField.value = "";
+}
+
+submitBtn.addEventListener("click", createTodoListItemFunction);
